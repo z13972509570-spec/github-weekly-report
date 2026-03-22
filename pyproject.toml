@@ -1,0 +1,7 @@
+[project]
+name = "github-weekly-report"
+version = "1.0.0"
+dependencies = ["requests", "httpx", "rich", "click", "pydantic"]
+
+[project.scripts]
+weekly-report = "cli.main:generate"
