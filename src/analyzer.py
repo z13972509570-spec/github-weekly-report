@@ -4,8 +4,9 @@ from dataclasses import dataclass, field
 
 logger = logging.getLogger(__name__)
 
+
 class Analyzer:
-      """Core analyzer class"""
+    """Core analyzer class"""
     
     def __init__(self, config: Dict = None):
         self.config = config or {}
@@ -19,6 +20,7 @@ class Analyzer:
             "data_type": type(data).__name__,
             "elements": len(data) if isinstance(data, (list, dict)) else 1,
         }
+
 
 def run(data: Dict) -> Dict:
     analyzer = Analyzer()
